@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RDBMSHelper creating with all dates 1`] = `
+{
+  "createdAt": Any<Date>,
+  "field": "field",
+  "id": StringMatching /\\^\\.\\{26\\}\\$/,
+  "updatedAt": Any<Date>,
+}
+`;
+
+exports[`RDBMSHelper creating with create date only 1`] = `
+{
+  "createdAt": Any<Date>,
+  "field": "field",
+  "id": StringMatching /\\^\\.\\{26\\}\\$/,
+}
+`;
+
+exports[`RDBMSHelper creating with update date only 1`] = `
+{
+  "field": "field",
+  "id": StringMatching /\\^\\.\\{26\\}\\$/,
+  "updatedAt": Any<Date>,
+}
+`;

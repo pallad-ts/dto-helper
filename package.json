@@ -1,0 +1,44 @@
+{
+  "name": "@pallad/dto-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "compiled/index.js",
+  "types": "compiled/index.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/pallad-scripts test",
+    "lint": "./node_modules/.bin/pallad-scripts lint",
+    "generate-barrels": "./node_modules/.bin/barrelsby -l all --delete -d ./src",
+    "compile": "npm run generate-barrels && ./node_modules/.bin/pallad-scripts compile",
+    "prepublishOnly": "npm run compile"
+  },
+  "files": [
+    "compiled"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pallad-ts/dto-helper.git"
+  },
+  "author": "Łukasz Kużyński <lukasz.kuzynski@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pallad-ts/dto-helper/issues"
+  },
+  "devDependencies": {
+    "@pallad/scripts": "^3.1.2",
+    "barrelsby": "^2.5.1",
+    "sinon": "^17.0.1",
+    "jest-extended": "^4.0.2",
+    "knex": "^3.1.0",
+    "pg": "^8.11.3",
+    "@pallad/connections-dev": "^1.0.0",
+    "@pallad/migrator-loader-javascript": "^1.2.8"
+  },
+  "dependencies": {
+    "@pallad/id": "^1.2.0",
+    "@pallad/mapper": "^1.3.1",
+    "@sweet-monads/maybe": "^3.3.1"
+  }
+}
